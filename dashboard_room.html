@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms Dashboard</title>
+    <link rel="stylesheet" href="dashboard_room.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+   <div class="container">
+
+    <!--sidebar-->
+    <aside class="sidebar">
+
+        <div>
+            <div class="logo" >
+                <img src="culter.png" alt="logo"/>
+                Culter
+            </div>
+
+            <div class="hostel-box">
+                <small>Hostel</small>
+                <strong>Nast Girls Hostel</strong>
+            </div>
+
+            <div class="section-title">General</div>
+
+            <ul class="menu">
+                <li class="menu-item">
+                <img src="dashboard.png" alt="Dsh_Icon" class="dash_icon"/>
+                Dashboard
+                </li>
+                <li class="menu-item active">
+                    <img src="room.png" alt="room_icon" class="r_icon"/>
+                    Rooms 
+                </li>
+                <ul class="submenu">
+                    <li>All</li>
+                    <li>Double Seater</li>
+                    <li>Triple Seater</li>
+                    <li>Four Seater</li>
+                </ul>
+                <li class="menu-item"><img src="book.png" alt="booking" class="b_icon"/>
+                    Bookings</li>
+                <li class="menu-item"><img src="customer.png" alt="customer" class="c-icon"/>       
+                    Customers</li>
+            </ul>
+
+            <div class="section-title">Tools</div>
+            <ul class="menu-tools">
+                <li class="menu-item"><img src="accset.png" alt="account" class="settings">
+                    Account & Settings</li>
+                <li class="menu-item"><img src="help.png" alt="help" class="help-icon"/>
+                    Help</li>
+                <li class="toggle-darkmode">
+                    <img src="mode.png" alt="toggle"/>
+                    Dark mode
+                    <label class="switch">
+                        <input type="checkbox" id="darkToggle">
+                        <span class="sloder"></span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="profile">
+            <img src="admin.png" alt="admin">
+            <div class="profile-details">
+                <strong>Guy Hawkins</strong>
+                <span>Admin</span>
+            </div>
+        </div>
+
+    </aside>
+    <script src="script.js"></script>
+
+    <!--Main COntent-->
+    <main class="main">
+        <header class="topbar">
+            <div class="icons">🔔 ✉️</div>
+            <div class="user-info">
+                <img src="admin.png" alt="admin" class="admin_icon"/>
+                <strong >Guy Huwkins</strong><span>(Admin)</span>
+            </div>
+        </header>
+
+        <section class="content">
+            <h1>Rooms</h1>
+            
+            <div class="actions">
+                <input type="search" placeholder="Search for id, name room" />
+                <div class="btn-group">
+                  <button class="btn">Filter</button>
+                  <button class="btn">Export</button>
+                  <button class="btn new-room">+ New Room</button>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Room Number</th>
+                        <th>Room Type</th>
+                        <th>Capacity</th>
+                        <th>Occupied</th>
+                        <th>Available</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#">023021</a>Befy Coffee</td>
+                        <td>$20</td>                
+                        <td>40</td>
+                        <td>234</td>
+                        <td>06/07/2025 at 22:40</td>
+                        <td>
+                            <span class="action-icom">✏️</span>
+                            <span class="action-icom">🗑️</span>
+                        </td>
+                    </tr>
+
+
+
+                </tbody>
+            </table>
+            <footer class="footer">Page 1 of 13</footer>
+        </section>
+    </main>
+
+    </div> 
+</body>
+</html>

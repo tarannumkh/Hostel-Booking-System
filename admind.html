@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container-fluid dashboard-container">
+    <div class="row mb-4">
+      <div class="col-md-3">
+        <div class="card p-3">
+          <div class="card-title">New Booking</div>
+          <div class="card-value">872</div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-3 bg-success">
+          <div class="card-title">Schedule Room</div>
+          <div class="card-value">285</div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-3 bg-warning">
+          <div class="card-title">Check In</div>
+          <div class="card-value">53</div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-3 bg-danger">
+          <div class="card-title">Check Out</div>
+          <div class="card-value">78</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-3">
+        <div class="card p-3">
+          <div class="text-center">
+            <div class="card-title">Available Room Today</div>
+            <div class="card-value">785</div>
+            <div class="progress my-2">
+              <div class="progress-bar" role="progressbar" style="width: 90%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card p-3 mt-3">
+          <div class="card-title">Booked Room Today</div>
+          <p>Pending: 234</p>
+          <p>Done: 65</p>
+          <p>Finish: 763</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card p-3">
+          <div class="card-title">Reservation Statistic</div>
+          <img src="https://dummyimage.com/600x200/3b82f6/f8fafc&text=Graph+Placeholder" alt="Graph">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-3 text-center">
+          <div class="card-title">Check In</div>
+          <div class="pie-chart mb-3"></div>
+          <div class="card-title">Check Out</div>
+          <div class="pie-chart" style="background: conic-gradient(#facc15 30%, #3b82f6 70%)"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="card p-3">
+          <div class="card-title">Calendar</div>
+          <table class="calendar w-100 text-white">
+            <tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr>
+            <tr><td>1</td><td class="bg-primary rounded">2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+            <tr><td>8</td><td class="bg-primary rounded">9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card p-3">
+          <div class="card-title">Latest Customer Review</div>
+          <div class="review-box">
+            <div class="reviewer">Ali Muzaffar</div>
+            <div class="stars">★★★★★</div>
+            <p>Food and service were excellent. We visited Long Waterfall and loved it!</p>
+          </div>
+          <div class="review-box">
+            <div class="reviewer">Kenau Repes</div>
+            <div class="stars">★★★★☆</div>
+            <p>Nice excursions and clean rooms. Helpful and friendly staff.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

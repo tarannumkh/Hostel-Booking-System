@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Information Form</title>
+    <link rel="stylesheet" href="requestregis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1><i class="fas fa-home"></i> Hostel Information</h1>
+        <form>
+            <div class="form-group">
+                <label for="hostel-type"><i class="fas fa-venus-mars"></i> Hostel Type</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-building"></i>
+                    <input type="text" id="hostel-type" value="Boys" readonly>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="hostel-name"><i class="fas fa-signature"></i> Hostel Name</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-hotel"></i>
+                    <input type="text" id="hostel-name" value="Adarsh Boys Hostel">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="hostel-owner"><i class="fas fa-user-tie"></i> Hostel Owner</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="hostel-owner" value="Karuna Buchathoki">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="hostel-description"><i class="fas fa-align-left"></i> Hostel Description</label>
+                <div class="textarea-with-icon">
+                    <i class="fas fa-pen"></i>
+                    <textarea id="hostel-description"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="address"><i class="fas fa-map-marker-alt"></i> Address</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-location-dot"></i>
+                    <input type="text" id="address" value="Bhaktapur, Nepal">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-at"></i>
+                    <input type="email" id="email" value="adarsh@gmail.com">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="contact"><i class="fas fa-phone"></i> Contact no.</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-mobile-screen"></i>
+                    <input type="tel" id="contact" value="987654321">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="business-doc"><i class="fas fa-file-contract"></i> Business Document</label>
+                <div class="file-upload">
+                    <i class="fas fa-file-upload"></i>
+                    <input type="file" id="business-doc">
+                    <label for="business-doc" class="file-label">Choose file</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="registration"><i class="fas fa-id-card"></i> Hostel Registration No (PAN)</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-address-card"></i>
+                    <input type="text" id="registration">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="facilities"><i class="fas fa-concierge-bell"></i> Facilities and Services</label>
+                <div class="textarea-with-icon">
+                    <i class="fas fa-list"></i>
+                    <textarea id="facilities"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="cover-image"><i class="fas fa-image"></i> Cover Image</label>
+                <div class="note"><i class="fas fa-info-circle"></i> Note: Format photos SVG, PNG, or JPG (Max size 4mb)</div>
+                <div class="image-upload-container">
+                    <div class="image-preview" id="cover-image-preview">
+                        <i class="fas fa-camera"></i>
+                        <span>Click to upload cover image</span>
+                    </div>
+                    <input type="file" id="cover-image" accept=".svg,.png,.jpg,.jpeg" class="hidden-file-input">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fas fa-images"></i> Photo1</label>
+                <div class="image-upload-container">
+                    <div class="image-preview" id="photo1-preview">
+                        <i class="fas fa-image"></i>
+                        <span>Click to upload photo</span>
+                    </div>
+                    <input type="file" accept="image/*" class="hidden-file-input">
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript to handle image preview
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cover image preview
+            const coverImageInput = document.getElementById('cover-image');
+            const coverImagePreview = document.getElementById('cover-image-preview');
+            
+            coverImageInput.addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        coverImagePreview.innerHTML = `<img src="${e.target.result}" alt="Preview">`;
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // Photo1 preview
+            const photo1Input = document.querySelector('input[accept="image/*"]');
+            const photo1Preview = document.getElementById('photo1-preview');
+            
+            photo1Input.addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        photo1Preview.innerHTML = `<img src="${e.target.result}" alt="Preview">`;
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
