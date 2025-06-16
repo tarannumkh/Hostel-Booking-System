@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Booking Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="bookedform.css">
+</head>
+<body>
+    <div class="booking-container">
+        <div class="room-info">
+            <h1><i class="fas fa-bed"></i> 2 Seater Room</h1>
+            <p class="price"><i class="fas fa-tag"></i> <strong>Rs9000/month per bed</strong></p>
+            
+            <div class="availability">
+               
+                <div class="seats-select">
+                    <div class="input-with-icon">
+                        <i class="fas fa-user-friends"></i>
+                        <select id="seats" name="seats">
+                            <option value="" disabled selected>No. of seats to book</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="personal-details">
+            <h2><i class="fas fa-user-circle"></i> Your Personal Details</h2>
+            
+            <form>
+                <div class="input-with-icon">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                </div>
+                
+                <div class="input-with-icon">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                </div>
+                
+                <div class="input-with-icon">
+                    <i class="fas fa-briefcase"></i>
+                    <input type="text" id="occupation" name="occupation" placeholder="Occupation" required>
+                </div>
+                
+                <div class="input-with-icon">
+                    <i class="fas fa-home"></i>
+                    <input type="text" id="address" name="address" placeholder="Permanent Address" required>
+                </div>
+                
+                <div class="input-with-icon">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                
+                <div class="input-with-icon">
+                    <i class="fas fa-birthday-cake"></i>
+                    <input type="number" id="age" name="age" placeholder="Age" required>
+                </div>
+                
+                <div class="input-with-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                    <select id="stay" name="stay">
+                        <option value="" disabled selected>Length of Stay</option>
+                        <option value="1">1 Month</option>
+                        <option value="3">3 Months</option>
+                        <option value="6">6 Months</option>
+                        <option value="12">1 Year</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+
+        <hr>
+
+        <button class="book-btn">
+            <i class="fas fa-wallet"></i> Book with Khalti
+        </button>
+    </div>
+</body>
+</html>

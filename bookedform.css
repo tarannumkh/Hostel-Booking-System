@@ -1,0 +1,131 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.booking-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+/* Room Info Section */
+.room-info h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.room-info h1 i {
+    color: #3498db;
+    margin-right: 10px;
+}
+
+.price {
+    color: #27ae60;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.price i {
+    margin-right: 8px;
+}
+
+.availability p {
+    color: #27ae60;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.availability p i {
+    margin-right: 8px;
+}
+
+/* Input with icon styles */
+.input-with-icon {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #3498db;
+}
+
+.input-with-icon input,
+.input-with-icon select {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.input-with-icon input::placeholder {
+    color: #999;
+}
+
+.input-with-icon select {
+    color: #999;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: white;
+}
+
+.input-with-icon select:valid {
+    color: #333;
+}
+
+/* Book Button */
+.book-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #5e35b1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.book-btn:hover {
+    background-color: #4527a0;
+}
+
+.book-btn i {
+    margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .booking-container {
+        padding: 15px;
+    }
+    
+    .room-info h1 {
+        font-size: 20px;
+    }
+    
+    .price {
+        font-size: 16px;
+    }
+}
