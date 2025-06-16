@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hostel Booking</title>
+  <link rel="stylesheet" href="booking1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="room-section">
+      <div class="room-image">
+        <img src="bookingroom.png" alt="Room Image">
+        <div class="thumbnail-slider">
+          <i class="fas fa-chevron-left"></i>
+          <div class="thumbnails">
+            <img src="bookingroom.png" alt="Thumb 1">
+            <img src="bookingroom.png" alt="Thumb 2">
+            <img src="bookingroom.png" alt="Thumb 3">
+            
+          </div>
+          <i class="fas fa-chevron-right"></i>
+        </div>
+      </div>
+
+      <div class="room-info">
+        <h2>2 Seater Room</h2>
+        <p class="price"><span>Rs</span><strong>9000</strong>/month per bed</p>
+
+        <label>Available
+          <input type="number" value="2" readonly>
+        </label>
+
+        <label>No. of seats to book
+          <select>
+            <option>1</option>
+            <option>2</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <h3>Add Your Personal Details</h3>
+    <form class="booking-form">
+      <div class="form-group">
+        <label><i class="fas fa-user"></i> Full Name</label>
+        <input type="text" placeholder="Enter your First Name and Last Name">
+      </div>
+      <div class="form-group">
+        <label><i class="fas fa-map-marker-alt"></i> Permanent Address</label>
+        <input type="text" placeholder="Enter Your Permanent Address">
+      </div>
+      <div class="form-group">
+        <label><i class="fas fa-phone"></i> Phone Number</label>
+        <input type="text" placeholder="Enter Your Phone Number">
+      </div>
+      <div class="form-group">
+        <label><i class="fas fa-envelope"></i> Email</label>
+        <input type="email" placeholder="Enter Your Email Address">
+      </div>
+      <div class="form-group">
+        <label><i class="fas fa-briefcase"></i> Occupation</label>
+        <input type="text" placeholder="Enter Student/Unemployed if not">
+      </div>
+      <div class="form-group">
+        <label><i class="fas fa-hourglass-half"></i> Length of Stay</label>
+        <select>
+          <option>Months</option>
+          <option>Weeks</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label><i class="fas fa-user-clock"></i> Age</label>
+        <input type="text" placeholder="Enter Your Age">
+      </div>
+
+      <button type="submit">Proceed to Book</button>
+    </form>
+  </div>
+</body>
+</html>
